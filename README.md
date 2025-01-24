@@ -1,5 +1,6 @@
+<!--
 ![](https://komarev.com/ghpvc/?username=iuricode&color=006bed)
-
+-->
 ## Sobre mim
 
 - 🤔 Explorando novas tecnologias e desenvolvendo soluções de software.
@@ -33,7 +34,7 @@
 ![Trello](https://img.shields.io/badge/-Trello-333333?style=flat&logo=trello&logoColor=007ACC)
 
 <br/>
-
+<!--
 <a href="https://github.com/iuricode" title="Perfil do Alisson">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=iuricode&theme=dracula&show_icons=true" />
 </a>
