@@ -4,25 +4,28 @@ const listaDeAmigos = [];
 
 function adicionarAmigo() {
 
+    const ulElement = getElemento('resultado')
+    ulElement.innerHTML = '';
+
     //recebe o valor do campo input.
-    const inputNome = document.querySelector('#amigo');
+    const inputNome = getElemento('amigo');
 
     //Verifica se o elemento de input foi encontrado.
     if (!inputNome) {
         console.error('Elemento input não encotrado');
         return;
     }
-    //Retira os espaços do inicio e do fim da variavel.
+    //Retira os espaços do início e do fim da variavel.
     let nome = inputNome.value.trim();
 
-    //Verefica  se o nome está vazio.
+    //Verifica  se o nome está vazio.
     if (nome === '') {
         alert('Por favor, preencha o campo nome para adicionar um item na lista.');
         inputNome.value = '';
         return;
     }
 
-    //verefica se o nome já existe na lista
+    //Verifica se o nome já existe na lista
     if (listaDeAmigos.includes(nome)) {
         alert('Este nome já existe na sua lista de amigos.');
         inputNome.value = '';
@@ -38,7 +41,8 @@ function adicionarAmigo() {
     //Limpa o campo input 
     inputNome.value = '';
     console.log(listaDeAmigos);
-}
+}//Fim adicionar amigo
+
 
 
 function renderizarListaAmigos() {
@@ -51,7 +55,34 @@ function renderizarListaAmigos() {
     listaDeAmigos.forEach(nome => {
         const li = document.createElement('li');
         li.textContent = nome;
-        document.getElementById('listaAmigos').appendChild(li);
+        listaAmigosElement.appendChild(li);
     });
-    
+
+}//Fim renderizarListaAmigo
+
+//Função chamada pelo button sortear amigo
+function sortearAmigo() {
+
+    const nomeSorteado = listaDeAmigos.length ? `O amigo secreto sorteado é: ${listaDeAmigos[Math.floor(Math.random() * listaDeAmigos.length)] }`:
+        "Não é possível realizar o sorteio. A lista de nomes está vazia.";
+    // alert(` ${nomeSorteado}`);
+
+    exibirNomeSorteado(nomeSorteado);
+}//Fim sortearAmigo
+
+
+//Exibe o nome do amigo sorteado.
+function exibirNomeSorteado(nomeSorteado) {
+    const ulElement = getElemento('resultado');
+    if (ulElement) {
+        ulElement.innerHTML =  nomeSorteado;
+    }
+    listaDeAmigos.length = 0;
+    renderizarListaAmigos();
+}
+
+
+//Busca elemento html
+function getElemento(id) {
+    return document.getElementById(id);
 }
