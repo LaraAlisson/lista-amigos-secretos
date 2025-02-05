@@ -82,7 +82,33 @@ function exibirNomeSorteado(nomeSorteado) {
 }
 
 
-//Busca elemento html
+//Busca elemento pelo id.
 function getElemento(id) {
     return document.getElementById(id);
 }
+
+
+//Ao selecionar um nome da lista de amigos o 
+document.addEventListener("DOMContentLoaded", function() {
+    let lista = document.getElementById("listaAmigos");
+
+    lista.addEventListener("click", function(event) {
+        if (event.target.tagName === "LI") {
+            let nome = event.target.innerText;
+            
+            // Exibe uma caixa de confirmação com botões "OK" (Excluir) e "Cancelar"
+            let confirmacao = confirm(`Você deseja excluir "${nome}"?`);
+
+            if (confirmacao) {
+                // Procura o índice do item
+                let index = listaDeAmigos.indexOf(nome); 
+
+                if (index !== -1) { 
+                    // Remove o item se encontrado
+                    listaDeAmigos.splice(index, 1); 
+                    renderizarListaAmigos();
+                }
+            }
+        }
+    });
+});

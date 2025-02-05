@@ -161,3 +161,12 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+li {
+    cursor: pointer; /* Muda o cursor para mãozinha */
+    transition: color 0.3s ease-in-out; /* Suaviza a mudança de cor */
+}
+
+li:hover {
+    color: #4B69FD; /* Escurece o texto ao passar o mouse */
+}
