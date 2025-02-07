@@ -4,8 +4,8 @@
 ## Sobre mim
 
 - 🤔 Explorando novas tecnologias e desenvolvendo soluções de software.
-- 🎓 Estudando {seu curso} no {faculdade}.
-- 💼 Trabalhando como {stack em que você trabalhar} na {empresa}.
+- 🎓 Estudando formacao logica de programacao grupo 8 one na Alura/ONE
+- 💼 Trabalhando como projetista e autmação industria na Videplast.
 - 🌱 Aprendendo mais sobre {tecnologias que você está aprendendo}.
 
 ## Minhas Skills
